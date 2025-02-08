@@ -1,0 +1,72 @@
+/*---==========INTER CSS FONT=============--------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*---============ROBOTO CSS FONT===============----------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+/*================**********SASS VARIABLE DECLARATION************====================*/
+
+$extraLarge: 12vw;
+$learger: 90px;
+$large: 80px;
+$medium: 55px;
+$caption: 28px;
+$small: 20px;
+
+
+$dark: #333333;
+$white: #ffffff;
+$lightwhite: #8a8a8a;
+$cyan: #00c9fc;
+$black: #000000;
+$lightBlack: #121212;
+
+
+$roboto: "Roboto", sans-serif;
+$inter: "Inter", sans-serif;
+
+
+@mixin bannerHeading{
+  font-size: $larger;
+  font-family: $inter;
+  color: $lightwhite;
+  font-weight: bold;
+  margin: 0;
+}
+
+@mixin heading{
+  font-size: $large;
+  font-family: $inter;
+  color: $lightwhite;
+  font-weight: bold;
+  margin: 0;
+}
+@mixin subHeading{
+  font-size: $medium;
+  font-family: $inter;
+}
+@mixin caption{
+  font-size: $caption;
+  font-family: $roboto;
+}
+@mixin para{
+  font-size: $small;
+  font-family: $roboto;
+  color: $lightwhite;
+}
+
+body{
+  background: $black !important;
+}

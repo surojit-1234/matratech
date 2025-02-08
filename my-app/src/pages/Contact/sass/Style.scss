@@ -1,0 +1,94 @@
+@import '../../../index.scss';
+
+.location-wrap{
+    padding: 4% 2.5% !important;
+    .address{
+      .heading{
+        margin-bottom: 6%;
+        h1{
+           @include heading;
+           text-transform: uppercase;
+        }
+        span{
+            @include para;
+        }
+      }
+     
+      .info>div{
+        width: 90%;
+        background-color: $lightBlack;
+        padding: 4%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 2%;
+        border-radius: 30px;
+        svg{
+          // font-size: 40px;
+          width: 50px;
+          height: 50px;
+          color: $white;
+        }
+        p{
+          width: 100%;
+          @include para;
+          color: $white;
+          margin: 0;
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+    .map{
+      height: 60vh;
+      width: 100%;
+      iframe{
+        height: 100%;
+        border-radius: 30px;
+        filter: grayscale(100%);
+        transition: .5s;
+        &:hover{
+            filter: grayscale(0%);
+        }
+      }
+    }
+}
+
+@media(max-width: 1400px){
+    $large: 55px;
+    $small: 17px;
+    .location-wrap .address .heading h1 {
+        font-size: $large;
+    }
+   .location-wrap .address .info > div p {
+        width: 100%;
+        font-size: $small;
+    }
+    .location-wrap .address .heading span {
+        font-size: $small;
+    }
+    .location-wrap .address .info > div svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+ @media(max-width:992px){
+  .location-wrap .map {
+    height: 60vh;
+  }
+ }
+@media(max-width: 767px){
+    $large:40px;
+    .location-wrap .map {
+        height: 40vh;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .location-wrap .address .info > div {
+        width: 100%;
+    }
+    .location-wrap .address .heading h1 {
+        font-size: $large;
+    }
+}

@@ -1,0 +1,131 @@
+/*---==========INTER CSS FONT=============--------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/*---============ROBOTO CSS FONT===============----------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*================**********SASS VARIABLE DECLARATION************====================*/
+body {
+  background: #000000 !important;
+}
+
+.contact-wrap {
+  background: #121212;
+  padding: 2.5%;
+}
+.contact-wrap .heading h1 {
+  font-size: 55px;
+  font-family: "Inter", sans-serif;
+  color: #8a8a8a;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contact-wrap .heading .col-2 {
+  height: 80px;
+  width: 80px;
+  background: #00c9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.contact-wrap .heading svg {
+  font-size: 28px;
+  color: #ffffff;
+}
+.contact-wrap h2 {
+  font-size: 55px;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  width: 55%;
+}
+.contact-wrap .telephone {
+  width: 45%;
+  transform: translateY(-40px);
+}
+.contact-wrap .bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+.contact-wrap form {
+  height: 100%;
+  background-color: #121212;
+  padding: 8%;
+  border-radius: 20px;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.5);
+}
+.contact-wrap form input, .contact-wrap form textarea {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+  padding: 3% 2%;
+  border-radius: 10px;
+  background-color: #b3b3b3;
+  color: black;
+}
+.contact-wrap form button {
+  width: 100%;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+  padding: 3% 0;
+  font-weight: bold;
+  border-radius: 20px;
+  background: #00c9fc;
+  color: #ffffff;
+  border: none;
+  transition: 0.5s;
+}
+.contact-wrap form button:hover {
+  background: #fff;
+  color: #00c9fc;
+}
+
+@media (max-width: 1400px) {
+  .contact-wrap .heading h1 {
+    font-size: 55px;
+  }
+  .contact-wrap h2 {
+    font-size: 45px;
+  }
+  .contact-wrap form input, .contact-wrap form textarea,
+  .contact-wrap form input, .contact-wrap form input {
+    font-size: 17px;
+  }
+  .contact-wrap form button {
+    font-size: 17px;
+  }
+  .contact-wrap .heading .col-2 {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-wrap h2 {
+    font-size: 30px;
+  }
+  .contact-wrap .heading .col-2 {
+    height: 45px;
+    width: 45px;
+  }
+  .contact-wrap .heading h1 {
+    font-size: 25px;
+  }
+  .contact-wrap .telephone {
+    width: 45%;
+    transform: translateY(-7px);
+  }
+}/*# sourceMappingURL=Style.css.map */

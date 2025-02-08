@@ -1,0 +1,31 @@
+@import '../../../index.scss';
+
+.banner-wrap{
+    height: 35vh;
+    width: calc(100% - 5%);
+    background-image: linear-gradient(270deg, #0b0b0b 12%, #092937 37%, #064b68 51%, #073e55 57%, #0b0f11 89%);
+    margin: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    h1{
+      @include bannerHeading;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $white;
+    }
+}
+
+@media(max-width: 1400px){
+    $large: 55px;
+    .banner-wrap h1 {
+        font-size: $large;
+    }
+}
+@media(max-width: 767px){
+    $large: 45px;
+    .banner-wrap h1 {
+        font-size: $large;
+    }
+}

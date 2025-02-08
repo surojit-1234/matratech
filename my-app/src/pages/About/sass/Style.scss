@@ -1,0 +1,210 @@
+@import '../../../index.scss';
+
+.overview-wrap{
+    padding: 3% 0;
+    .heading{
+        margin-bottom: 20px;
+        h1{
+           @include heading;
+           text-transform: uppercase;
+           margin: 0;
+        }
+        span{
+          @include para;
+        }
+    }
+    .para{
+        p{
+            @include para;
+            text-align: justify;
+        }
+    }
+}
+
+.achivements-wrap{
+    padding: 2.5%;
+    h1{
+      @include heading;
+      text-transform: uppercase;
+    }
+    span{
+      @include para;
+    }
+   .achivements-container{
+    margin: 4% 0;
+      .card{
+        background-color: $lightBlack;
+        padding: 5%;
+        border-radius: 30px;
+        height: 100%;
+        transition: .7s linear;
+        span{
+            padding: 2.5%;
+            background: $white;
+            border-radius: 20px;
+        }
+        .card-img-top{
+            padding: 8% 5%;
+            background: $white;
+            border-radius: 30px;
+            margin-bottom: 3%;
+        }
+        .card-title{
+            font-size: 18px;
+            font-family: "Roboto", sans-serif;
+            color: #ffffff;
+            font-weight: 300;
+        }
+        .card-text{
+            @include para
+        }
+        &:hover{
+            box-shadow: 1px 1px 4px rgba(7, 86, 117, 0.5);
+            background-image: linear-gradient(240deg, #000506 5%, #003441 15%, #004a5d, #001419 27%, #000202 30%);
+        }
+      }
+   }
+}
+
+.career-wrap{
+    padding: 4% 2.5% !important;
+    background-image: linear-gradient(168deg, #000506 -1%, #003441 0%, #004a5d 0%, #001419 27%, #000202 45%);
+    .heading{
+        margin-bottom: 20px;
+        h1{
+            @include heading;
+            text-transform: uppercase;
+        }
+        span{
+            @include para;
+        }
+    }
+    .para{
+        @include para;
+    }
+    img{
+        filter: grayscale(100%);
+        transition: .5s;
+        &:hover{
+            filter: grayscale(0);
+        }
+    }
+    .btn_area{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.apply_box{
+    width: 70%;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    box-shadow: 2px 3px 15px 1px black;
+    border-radius: 15px;
+    padding: 4%;
+}
+ .small{
+    font-size: 17px;
+}
+.form_container{
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+
+}
+label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+input,select,textarea{
+    padding: 8px 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 13px;
+}
+input:focus{
+    outline-color: rgb(210, 21, 147);
+}
+.button_container{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    padding: 5px;
+}
+button{
+        background-color: $cyan;
+        border-radius: 7px;
+        border: transparent solid 2px;
+        padding: 5px 10px;
+        color: whitesmoke;
+        padding: 10px;
+        transition: .5s linear;
+        &:hover{
+            opacity: .8;
+        }
+}
+// button:hover{
+//     background-color: rgb(15, 117, 225);
+//     color: rgb(15, 14, 14);
+//     cursor: pointer;
+// }
+.textarea_control {
+    grid-column: 1 / span 2 ;
+    
+}
+.textarea_control textarea{
+    width: 100%;
+}
+
+@media(max-width: 1400px){
+    $large: 55px;
+    $small: 17px;
+
+    .overview-wrap .heading h1,.achivements-wrap h1, .career-wrap .heading h1 {
+        font-size: $large;
+    }
+    .overview-wrap .heading span,.achivements-wrap span,.career-wrap .heading span  {
+        font-size: $small;
+    }
+    .overview-wrap .para p {
+        font-size: $small;
+    }
+    .achivements-wrap .achivements-container .card .card-title {
+        font-size: $small;
+    }
+    .achivements-wrap .achivements-container .card .card-text {
+        font-size: $small;
+    }
+    .career-wrap .para {
+        font-size: $small;
+    }
+}
+
+@media(max-width:992px){
+
+}
+
+@media(max-width:767px){
+    $large: 40px;
+    .overview-wrap .heading h1, .achivements-wrap h1, .career-wrap .heading h1 {
+        font-size: $large;
+        margin-bottom: 2%;
+    }
+    .overview-wrap .para p{
+        text-align: left;
+    }
+    .apply_box {
+        width: 96%;
+    }
+    .form_container {
+        display: flex;
+        flex-direction: column;
+    }
+}

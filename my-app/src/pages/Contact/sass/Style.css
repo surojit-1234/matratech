@@ -1,0 +1,112 @@
+/*---==========INTER CSS FONT=============--------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/*---============ROBOTO CSS FONT===============----------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*================**********SASS VARIABLE DECLARATION************====================*/
+body {
+  background: #000000 !important;
+}
+
+.location-wrap {
+  padding: 4% 2.5% !important;
+}
+.location-wrap .address .heading {
+  margin-bottom: 6%;
+}
+.location-wrap .address .heading h1 {
+  font-size: 80px;
+  font-family: "Inter", sans-serif;
+  color: #8a8a8a;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+.location-wrap .address .heading span {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+}
+.location-wrap .address .info > div {
+  width: 90%;
+  background-color: #121212;
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2%;
+  border-radius: 30px;
+}
+.location-wrap .address .info > div svg {
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+}
+.location-wrap .address .info > div p {
+  width: 100%;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+  color: #ffffff;
+  margin: 0;
+}
+.location-wrap .address .info > div p a {
+  color: #ffffff;
+}
+.location-wrap .map {
+  height: 60vh;
+  width: 100%;
+}
+.location-wrap .map iframe {
+  height: 100%;
+  border-radius: 30px;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.location-wrap .map iframe:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 1400px) {
+  .location-wrap .address .heading h1 {
+    font-size: 55px;
+  }
+  .location-wrap .address .info > div p {
+    width: 100%;
+    font-size: 17px;
+  }
+  .location-wrap .address .heading span {
+    font-size: 17px;
+  }
+  .location-wrap .address .info > div svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .location-wrap .map {
+    height: 60vh;
+  }
+}
+@media (max-width: 767px) {
+  .location-wrap .map {
+    height: 40vh;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .location-wrap .address .info > div {
+    width: 100%;
+  }
+  .location-wrap .address .heading h1 {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=Style.css.map */

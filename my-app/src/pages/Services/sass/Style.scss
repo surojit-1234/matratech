@@ -1,0 +1,258 @@
+@import '../../../index.scss';
+
+.service_wrap{
+    padding: 3% 2.5% !important;
+    .flip-card{
+        width: 100%;
+        height: 60vh;
+        perspective: 1000px;
+        cursor: pointer;
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            .flip-card-front, .flip-card-back {
+                border-radius: 25px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                padding: 4%;
+            }
+            .flip-card-front {
+                background-color: $dark;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: space-between;
+                transition: .5s;
+                h1{
+                    @include subHeading;
+                    text-align: left;
+                    text-transform: capitalize;
+                    line-height: 1;
+                    color: $white;
+                    font-weight: 300;
+                }
+                .card_footer{
+                    width: 100%;
+                    padding-top: 3%;
+                    border-top: 1px solid $white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    p{
+                        @include para;
+                        color: $white;
+                        margin-bottom: 4px;
+                    }
+                    svg{
+                        color: $black;
+                        //font-size: $small;
+                        height: 30px;
+                        width: 30px;
+                        background-color: $white;
+                        border-radius: 50%;
+                    }
+                }
+                &:hover{
+                    box-shadow: 1px 1px 4px rgba(7, 86, 117, 0.5);
+                }
+            }
+              
+              /* Style the back side */
+            .flip-card-back {
+                background-color: $dark;
+                color: white;
+                transform: rotateY(180deg);
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        list-style: none;
+                        text-align: left;
+                        background-color: $white;
+                        color: $black;
+                        margin-bottom: 3%;
+                        padding: 2% 10%;
+                        border-radius: 20px;
+                        font-size: $small;
+                        width: fit-content;
+                        &:hover{
+                            box-shadow: 2px 4px 16px rgba(131, 129, 129, 0.4);
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                // .card_footer{
+                //     width: 100%;
+                //     padding-top: 3%;
+                //     border-top: 1px solid $white;
+                //     display: flex;
+                //     flex-direction: column;
+                //     align-items: start;
+                //     p{
+                //         @include para;
+                //         color: $white;
+                //         margin-bottom: 4px;
+                //     }
+                //     svg{
+                //         color: $black;
+                //         //font-size: $small;
+                //         height: 30px;
+                //         width: 30px;
+                //         background-color: $white;
+                //         border-radius: 50%;
+                //     }
+                // }
+            }
+        }
+        // &:hover{
+        //     .flip-card-inner {
+        //         transform: rotateY(180deg);
+        //     }
+        // }
+        
+    }
+}
+
+.more-service-wrap{
+    padding: 2.5%;
+    .heading{
+        margin-bottom: 25px;
+        h1{
+            @include heading;
+            text-transform: uppercase;
+        }
+        span{
+            @include para;
+        }
+    }
+   
+    .parent{
+        h4{
+           @include caption;
+           color: $white;
+           margin-bottom: 1.2%;
+        }
+        .child{
+            border: 2px solid $white;
+            border-radius: 25px;
+            padding: 3%;
+            max-height: 20vh;
+            gap: 1vw;
+            padding: 1vw;
+            border: 2px solid #fefeff50;
+            border-radius: 25px;
+            pointer-events: all;
+            transition: .75s ease;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            cursor: pointer;
+             &:hover{
+                transform: scale(1.15);
+                max-height: 33vh;
+                padding-bottom: 5%;
+                z-index: 10;
+                border: 2px solid #fefeff;
+                p{
+                    opacity: 1;
+                }
+            }
+            img{
+               width: 18%;
+            }
+            h5{
+              @include para;
+              color: White;
+              margin-top: 2%
+            }
+            p{
+              @include para;
+              transition: .25s linear;
+              position: relative;
+              opacity: 0;
+              line-height: 1.2;
+            }
+        }
+    }
+}
+
+
+@media(max-width:1400px){
+   $small: 17px;
+   $caption: 27px;
+   $large: 55px;
+   $medium: 40px;
+   .more-service-wrap .parent .child h5,.more-service-wrap .parent .child p{
+    font-size: $small;
+ } 
+ .more-service-wrap .parent .child p{
+    font-size: 15px;
+ }
+ .more-service-wrap .parent h4 {
+    font-size: $caption;
+ }
+ .more-service-wrap .heading h1 {
+    font-size: $large;
+ }
+ .more-service-wrap .heading span {
+    font-size: $small;
+ }
+ .service_wrap .flip-card .flip-card-inner .flip-card-front h1 {
+    font-size: $medium;
+ }
+ .service_wrap .flip-card .flip-card-inner .flip-card-back ul li {
+    font-size: $small;
+ }
+}
+
+@media(max-width: 1200px){
+    $large: 38px;
+    .service_wrap .flip-card .flip-card-inner .flip-card-front h1 {
+       font-size: $large;
+    }
+}
+
+@media(max-width:992px){
+
+}
+
+@media(max-width: 767px){
+    $large:38px;
+    $caption: 22px;
+    .service_wrap .flip-card .flip-card-inner .flip-card-front h1 {
+        font-size: $large;
+    }
+    .more-service-wrap .heading h1 {
+        font-size: $large;
+    }
+    .more-service-wrap .parent h4 {
+        font-size: $caption;
+    }
+    .more-service-wrap .parent .child:hover{
+        transform: scale(1);
+    }
+    .more-service-wrap .parent .child {
+        margin-bottom: 3%;
+        padding: 3%;
+        max-height: 15vh;
+    }
+    .service_wrap {
+        padding: 3% 5% !important;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .child{
+        flex: 0 0 auto;
+        width: 32% !important;
+    }
+}

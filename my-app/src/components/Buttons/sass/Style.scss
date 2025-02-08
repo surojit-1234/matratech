@@ -1,0 +1,131 @@
+@import "../../../index.scss";
+
+// .btn_area{
+//     position: relative;
+//     margin-top: 5%;
+//      .circle {
+//         width: 100px;
+//         height: 100px;
+//         border: 1px solid wheat;
+//         border-radius: 50%;
+//         position: relative;
+//         transition: .5s;
+//     }
+//     a {
+//         position: absolute;
+//         background-color: #fff;
+//         color: $white;
+//         text-decoration: none;
+//         padding: 10px 0;
+//         top: 50%;
+//         left: 50px;
+//         transform: translate(-10px,-50%);
+//         font-size: $small;
+//         font-family: $roboto;
+//         background: $black;
+//         width: 150%;
+//     }
+//     &:hover{
+//         .circle {
+//             border: 1px solid $cyan;
+//         }
+//         a{
+//             color: $cyan;
+//         }
+//     }
+// }
+
+// @media(max-width:1400px){
+//     .btn_area .circle {
+//         width: 50px;
+//         height: 50px;
+//     }
+//     .btn_area a {
+//         font-size: 17px;
+//         width: 250%;
+//     }
+// }
+
+// @media(max-width:767px){
+//     .btn_area{
+//         margin-top: 10%;
+//     }
+// }
+
+.learnmore-btn {
+	background: none;
+	border: none;
+	padding: 10px 5px;
+	font-weight: bold;
+	font-size: 20px;
+	position: relative;
+    font-weight: 400;
+    margin-top: 2.5%;
+    text-decoration: none;
+    @include para;
+    width: 165px;
+    transition: .5s;
+	span{
+		padding: 4px 0;
+		z-index: 5;
+		position: relative;
+		transition: .4s linear;
+		font-size: 18px !important;
+	}
+    &:hover{
+		span{
+			color: $cyan !important;
+			svg{
+				animation: anim .6s linear;
+				@keyframes anim {
+					0%{
+                    transform: translate(0,0);
+					}50%{
+					transform: translate(10px,0);
+					}100%{
+					transform: translate(0,0);
+					}
+				}
+			}
+		}
+    }
+	&:after {
+		transform: translateY(-50%);
+		content: "";
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		//background-color: white;
+        text-decoration: none;
+        border: 2px solid $cyan;
+		position: absolute;
+		left: -2%;
+		top: 50%;
+		z-index:4;
+		transition: 0.3s ease;
+	}
+
+	&:hover:after {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		border-radius: 10px;
+	}
+}
+
+@media(max-width:1400px){
+    .learnmore-btn {
+        &:after {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}
+@media(max-width: 767px){
+    .learnmore-btn {
+        &:after {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import '../../../index.scss';
+
+.top-nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2% 5%;
+   position: absolute;
+   //top: 1.2%;
+   top: 15px;
+   width: 100%;
+   z-index: 10;
+   .logo{
+     width: 9%;
+     height: auto;
+     img{
+      width: 100%;
+     }
+   }
+   .hamberger{
+     position: fixed;
+     right: 3%;
+     z-index: 20;
+     font-size: 30px;
+     color: $white;
+    // background: rgba(0, 0, 0, 0.631);
+    background-color: #00cafc28;
+     height: 40px;
+     width: 60px;
+     border-radius: 14px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     .open{
+        
+     }
+     .close{
+      display: none;
+     }
+   }
+   .contact-info{
+      @include para;
+      color: $white;
+      line-height: 1.1;
+     h5{
+      margin: 0;
+     }
+     a{
+      text-decoration: none;
+      color: $white;
+      opacity: .5;
+      font-size: 17px;
+      font-weight: 300;
+     }
+   }
+}
+
+@media(max-width:1400px){
+  $small: 18px;
+  nav ul li .item {
+    font-size: $small;
+  }
+  .top-nav .contact-info h5 {
+    font-size: $small;
+  }
+  .top-nav .contact-info a {
+    font-size: 17px;
+    transition: .6s;
+    &:hover{
+      color: $cyan;
+    }
+  }
+}
+
+@media(max-width: 767px){
+  nav ul li .item {
+    font-size: 24px;
+  }
+
+  .top-nav .contact-info {
+      display: none;
+  }
+  .top-nav .logo {
+    width: 24%;
+ }
+}
+
+@media(min-width:768px){
+  .top-nav .hamberger{
+    display: none;
+  }
+}

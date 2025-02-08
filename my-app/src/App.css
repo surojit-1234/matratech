@@ -1,0 +1,10 @@
+/* .scroll-text {
+  font-size: 2rem;
+  margin: 20px 0;
+  transition: color 0.5s ease;
+} */
+
+.Loader{
+  color: red;
+  background-color: yellow;
+}

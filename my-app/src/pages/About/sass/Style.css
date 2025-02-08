@@ -1,0 +1,243 @@
+/*---==========INTER CSS FONT=============--------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/*---============ROBOTO CSS FONT===============----------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*================**********SASS VARIABLE DECLARATION************====================*/
+body {
+  background: #000000 !important;
+}
+
+.overview-wrap {
+  padding: 3% 0;
+}
+.overview-wrap .heading {
+  margin-bottom: 20px;
+}
+.overview-wrap .heading h1 {
+  font-size: 80px;
+  font-family: "Inter", sans-serif;
+  color: #8a8a8a;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  margin: 0;
+}
+.overview-wrap .heading span {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+}
+.overview-wrap .para p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+  text-align: justify;
+}
+
+.achivements-wrap {
+  padding: 2.5%;
+}
+.achivements-wrap h1 {
+  font-size: 80px;
+  font-family: "Inter", sans-serif;
+  color: #8a8a8a;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+.achivements-wrap span {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+}
+.achivements-wrap .achivements-container {
+  margin: 4% 0;
+}
+.achivements-wrap .achivements-container .card {
+  background-color: #121212;
+  padding: 5%;
+  border-radius: 30px;
+  height: 100%;
+  transition: 0.7s linear;
+}
+.achivements-wrap .achivements-container .card span {
+  padding: 2.5%;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.achivements-wrap .achivements-container .card .card-img-top {
+  padding: 8% 5%;
+  background: #ffffff;
+  border-radius: 30px;
+  margin-bottom: 3%;
+}
+.achivements-wrap .achivements-container .card .card-title {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 300;
+}
+.achivements-wrap .achivements-container .card .card-text {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+}
+.achivements-wrap .achivements-container .card:hover {
+  box-shadow: 1px 1px 4px rgba(7, 86, 117, 0.5);
+  background-image: linear-gradient(240deg, #000506 5%, #003441 15%, #004a5d, #001419 27%, #000202 30%);
+}
+
+.career-wrap {
+  padding: 4% 2.5% !important;
+  background-image: linear-gradient(168deg, #000506 -1%, #003441 0%, #004a5d 0%, #001419 27%, #000202 45%);
+}
+.career-wrap .heading {
+  margin-bottom: 20px;
+}
+.career-wrap .heading h1 {
+  font-size: 80px;
+  font-family: "Inter", sans-serif;
+  color: #8a8a8a;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+.career-wrap .heading span {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+}
+.career-wrap .para {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+}
+.career-wrap img {
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.career-wrap img:hover {
+  filter: grayscale(0);
+}
+.career-wrap .btn_area {
+  display: flex;
+  justify-content: center;
+}
+
+.apply_box {
+  width: 70%;
+  padding: 20px;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 3%;
+  box-shadow: 2px 3px 15px 1px black;
+  border-radius: 15px;
+  padding: 4%;
+}
+
+.small {
+  font-size: 17px;
+}
+
+.form_container {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  padding: 8px 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+input:focus {
+  outline-color: rgb(210, 21, 147);
+}
+
+.button_container {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+button {
+  background-color: #00c9fc;
+  border-radius: 7px;
+  border: transparent solid 2px;
+  padding: 5px 10px;
+  color: whitesmoke;
+  padding: 10px;
+  transition: 0.5s linear;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.textarea_control {
+  grid-column: 1/span 2;
+}
+
+.textarea_control textarea {
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .overview-wrap .heading h1, .achivements-wrap h1, .career-wrap .heading h1 {
+    font-size: 55px;
+  }
+  .overview-wrap .heading span, .achivements-wrap span, .career-wrap .heading span {
+    font-size: 17px;
+  }
+  .overview-wrap .para p {
+    font-size: 17px;
+  }
+  .achivements-wrap .achivements-container .card .card-title {
+    font-size: 17px;
+  }
+  .achivements-wrap .achivements-container .card .card-text {
+    font-size: 17px;
+  }
+  .career-wrap .para {
+    font-size: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .overview-wrap .heading h1, .achivements-wrap h1, .career-wrap .heading h1 {
+    font-size: 40px;
+    margin-bottom: 2%;
+  }
+  .overview-wrap .para p {
+    text-align: left;
+  }
+  .apply_box {
+    width: 96%;
+  }
+  .form_container {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=Style.css.map */

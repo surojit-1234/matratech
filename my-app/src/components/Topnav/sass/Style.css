@@ -1,0 +1,102 @@
+/*---==========INTER CSS FONT=============--------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/*---============ROBOTO CSS FONT===============----------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*================**********SASS VARIABLE DECLARATION************====================*/
+body {
+  background: #000000 !important;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 5%;
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  z-index: 10;
+}
+.top-nav .logo {
+  width: 9%;
+  height: auto;
+}
+.top-nav .logo img {
+  width: 100%;
+}
+.top-nav .hamberger {
+  position: fixed;
+  right: 3%;
+  z-index: 20;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: rgba(0, 202, 252, 0.1568627451);
+  height: 40px;
+  width: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-nav .hamberger .close {
+  display: none;
+}
+.top-nav .contact-info {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #8a8a8a;
+  color: #ffffff;
+  line-height: 1.1;
+}
+.top-nav .contact-info h5 {
+  margin: 0;
+}
+.top-nav .contact-info a {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.5;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+@media (max-width: 1400px) {
+  nav ul li .item {
+    font-size: 18px;
+  }
+  .top-nav .contact-info h5 {
+    font-size: 18px;
+  }
+  .top-nav .contact-info a {
+    font-size: 17px;
+    transition: 0.6s;
+  }
+  .top-nav .contact-info a:hover {
+    color: #00c9fc;
+  }
+}
+@media (max-width: 767px) {
+  nav ul li .item {
+    font-size: 24px;
+  }
+  .top-nav .contact-info {
+    display: none;
+  }
+  .top-nav .logo {
+    width: 24%;
+  }
+}
+@media (min-width: 768px) {
+  .top-nav .hamberger {
+    display: none;
+  }
+}/*# sourceMappingURL=Style.css.map */
