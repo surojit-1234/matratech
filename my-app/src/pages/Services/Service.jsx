@@ -14,6 +14,8 @@ import { FiPlus } from "react-icons/fi";
 import './sass/Style.css';
 import PageLoader from '../../components/Pageloader/PageLoader';
 
+import "abc";
+
 
 const Service = () => {
   const [baseImage, setBaseImage] = useState('https://backend.matratech.in/uploads');
